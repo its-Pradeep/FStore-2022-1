@@ -18,7 +18,7 @@ async def help_cb(c, m):
     # help text
     help_text = """**You need Help! Read this 👇**
 
-★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message with URL Buttons.\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n• **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
+★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message (media) with URL Buttons .\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n• **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
 
 
 **You can use me in channel too 😉**
@@ -60,21 +60,21 @@ async def about_cb(c, m):
     bot = await c.get_me()
 
     # about text
-    about_text = f"""--**My Details:**--
+    about_text = f"""--**My Details :**--
 
-🤖 My Name : {bot.mention(style='md')}
+🤖 **My Name** : {bot.mention(style='md')}
     
-📝 Language : [Python 3](https://www.python.org/)
+📝 **Language** : [Python 3](https://www.python.org/)
 
-🧰 Framework : [Pyrogram](https://github.com/pyrogram/pyrogram)
+🧰 **Framework** : [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
+👨‍💻 **Creator** : [This Person](https://t.me/HKrrish)
 
-📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
+🤗 **Credit** : [@Anoymous_Ns](https://t.me/Anoymous_Ns)
 
-👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
+👥 **Contact** : [Here](https://t.me/KrAsst_Bot)
 
-🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Ns-Bots/TG-File-Store)
+🌐 **Help** :  [Click Here](https://telegra.ph/TG-File-Store-Bot-05-25-2)
 """
 
     # creating buttons
