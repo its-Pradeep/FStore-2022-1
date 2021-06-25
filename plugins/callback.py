@@ -16,16 +16,16 @@ async def help_cb(c, m):
     await m.answer()
 
     # help text
-    help_text = """**You need Help?? 🧐**
+    help_text = """**You need Help! Read this 👇**
 
-★ Just send me the files i will store file and give you share able link
+★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message with URL Buttons.\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n• **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
 
 
 **You can use me in channel too 😉**
 
-★ Make me admin in your channel with edit permission. Thats enough now continue uploading files in channel i will edit all posts and add share able link url buttons
+★ Make me admin in your channel with edit permission. Thats enough now continue uploading files in channel, I will edit all posts and add share able link url buttons.
 
-**How to enable uploader details in caption**
+**How to Enable uploader details in caption!**
 
 ★ Use /mode command to change and also you can use `/mode channel_id` to control caption for channel msg."""
 
@@ -62,11 +62,11 @@ async def about_cb(c, m):
     # about text
     about_text = f"""--**My Details:**--
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
+🤖 My Name : {bot.mention(style='md')}
     
-📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
+📝 Language : [Python 3](https://www.python.org/)
 
-🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
+🧰 Framework : [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
 
