@@ -39,7 +39,7 @@ You can store your any Telegram Media for Permanent Shareable Link!\n• Channel
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('Know More 📝', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('Know More 📝', url=f"https://telegra.ph/TG-File-Store-Bot-05-25-2"),
             InlineKeyboardButton('Help 💡', callback_data="help")
         ],
         [
