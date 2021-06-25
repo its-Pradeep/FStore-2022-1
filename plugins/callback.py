@@ -18,7 +18,7 @@ async def help_cb(c, m):
     # help text
     help_text = """**You need Help! Read this 👇**
 
-★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message (media) with URL Buttons .\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n• **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
+★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message (media) with URL Buttons .\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n💥 **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
 
 
 **You can use me in channel too 😉**
@@ -27,7 +27,7 @@ async def help_cb(c, m):
 
 **How to Enable uploader details in caption!**
 
-★ Use /mode command to change and also you can use `/mode channel_id` to control caption for channel msg."""
+★ Use /mode command to change and also you can use `/mode channel_id` to control caption for channel msg.\n\n🚶‍♂️ Thank You!!"""
 
     # creating buttons
     buttons = [
