@@ -16,22 +16,22 @@ async def storefile(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "--**🗃️ File Details:**--\n\n\n"
-        text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
-        text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
+        text = "--**🗃️ File Details :**--\n\n\n"
+        text += f"📂 **File Name :** `{media.file_name}`\n\n" if media.file_name else ""
+        text += f"💽 **Mime Type :** `{media.mime_type}`\n\n" if media.mime_type else ""
+        text += f"📊 **File Size :** `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
         if not m.document:
-            text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
+            text += f"🎞 **Duration :** `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
             if m.audio:
-                text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-                text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += f"__✏ Caption:__ `{m.caption}`\n\n" if m.caption else ""
-    text += "**--Uploader Details:--**\n\n\n"
-    text += f"__🦚 First Name:__ `{m.from_user.first_name}`\n\n"
-    text += f"__🐧 Last Name:__ `{m.from_user.last_name}`\n\n" if m.from_user.last_name else ""
-    text += f"__👁 User Name:__ @{m.from_user.username}\n\n" if m.from_user.username else ""
-    text += f"__👤 User Id:__ `{m.from_user.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.from_user.dc_id}\n\n" if m.from_user.dc_id else ""
+                text += f"🎵 **Title :** `{media.title}`\n\n" if media.title else ""
+                text += f"🎙 **Performer :** `{media.performer}`\n\n" if media.performer else ""
+    text += f"**✏ Caption :** `{m.caption}`\n\n" if m.caption else ""
+    text += "**--Uploader Details :--**\n\n\n"
+    text += f"**🙂 First Name :** `{m.from_user.first_name}`\n\n"
+    text += f"**🙃 Last Name :** `{m.from_user.last_name}`\n\n" if m.from_user.last_name else ""
+    text += f"**💥 User Name :** @{m.from_user.username}\n\n" if m.from_user.username else ""
+    text += f"**👤 User Id :** `{m.from_user.id}`\n\n"
+    text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n" if m.from_user.dc_id else ""
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -71,22 +71,22 @@ async def storefile_channel(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "**🗃️ File Details:**\n\n\n"
-        text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
-        text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
+        text = "**🗃️ File Details :**\n\n\n"
+        text += f"📂 **File Name :** `{media.file_name}`\n\n" if media.file_name else ""
+        text += f"💽 **Mime Type :** `{media.mime_type}`\n\n" if media.mime_type else ""
+        text += f"📊 **File Size :** `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
         if not m.document:
-            text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
+            text += f"🎞 **Duration :** `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
             if m.audio:
-                text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-                text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += f"__✏ Caption:__ `{m.caption}`\n\n"
-    text += "**Uploader Details:**\n\n\n"
-    text += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
-    text += f"__🗣 User Name:__ @{m.chat.username}\n\n" if m.chat.username else ""
-    text += f"__👤 Channel Id:__ `{m.chat.id}`\n\n"
-    text += f"__💬 DC ID:__ {m.chat.dc_id}\n\n" if m.chat.dc_id else ""
-    text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
+                text += f"🎵 **Title :** `{media.title}`\n\n" if media.title else ""
+                text += f"🎙 **Performer :** `{media.performer}`\n\n" if media.performer else ""
+    text += f"**✏ Caption :** `{m.caption}`\n\n"
+    text += "**Uploader Details :**\n\n\n"
+    text += f"**📢 Channel Name :** `{m.chat.title}`\n\n"
+    text += f"**🗣 User Name :** @{m.chat.username}\n\n" if m.chat.username else ""
+    text += f"**👤 Channel Id :** `{m.chat.id}`\n\n"
+    text += f"**💬 DC ID :** {m.chat.dc_id}\n\n" if m.chat.dc_id else ""
+    text += f"**👥 Members Count :** {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
