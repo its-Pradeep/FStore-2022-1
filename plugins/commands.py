@@ -28,18 +28,18 @@ async def start(c, m, cb=False):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')} 👋 
 
-💡 ** I'm Telegram File Store Bot! 🤖**
+💡 ** --I'm Telegram File Store Bot!-- 🤖**
 
-You can store your any Telegram Media for Permanent Shareable Link!\n\n➠ Check Help 👇🏻
+`You can store your any Telegram Media for Permanent Shareable Link!`\n\n➠ **Check Help**
 
-
-**<| @HKrrish 👨‍💻👨‍💻\n..
+**<| @HKrrish 👨‍💻\n..
 """
+
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('In Details 📝', url=f"https://telegra.ph/TG-File-Store-Bot-05-25-2"),
+            InlineKeyboardButton('Details 📝', url=f"https://telegra.ph/TG-File-Store-Bot-05-25-2"),
             InlineKeyboardButton('Help 💡', callback_data="help")
         ],
         [
