@@ -16,24 +16,26 @@ async def help_cb(c, m):
     await m.answer()
 
     # help text
-    help_text = """**You need Help! Read this 👇**
+    help_text = f"""**Hello! {m.from_user.mention(style='md')}, 👋**\n\n
+**❓ --Help Menu--**\n\n
+★ Just send me the files, I will store file and give you share able link. (`your files will totally safe here`)\n\n👨‍💻 **--Commands--**\n\n• • /start : for start the bot.\n•  /mode : You Can Enable or Disable Uploader Details in Caption.\n  `/mode channel_id` : for channels.\n• /batch : You Can Store Multiple files in one link.\n• /me : Your Info.\n• /bots : Our some useful bots.\n• /rate : Rate this Bot.
 
-★ Just send me the files, I will store file and give you share able link.\n\n☆ **My Features**\n\n• Support Channels! 👇\n• Files Store Permanent!\n• Support any Telegram Media with any size.\n• Support Message (media) with URL Buttons .\n• Remove Forward Tag also.\n You Can Enable or Disable Uploader Details in Caption by /mode. 👇\n• You Can Store Multiple files in one link by /batch!\n• You can delete your file while saving files in private. 🤗\n• You will get your info by /me 🙃\n\n💥 **Your files is Totally Safe by a Unique Code!**✌\n\n**📍Remember**\n\n• Please Don't Send Adults files.\n• Don't spam!\n• If Bot Stop, Check 👉 Status on Home --> **Know More** Button.\n\n
 
+**💠 --Features-- ❕**
 
-**You can use me in channel too 😉**
+**1. Support Channels :** just make me admin with edit permission, I'll add url & share button In media posts.
 
-★ Make me admin in your channel with edit permission. Thats enough now continue uploading files in channel, I will edit all posts and add share able link url buttons.
+**2.** You can delete your file while saving files in private. 🗑
 
-**How to Enable uploader details in caption!**
-
-★ Use /mode command to change and also you can use `/mode channel_id` to control caption for channel msg.\n\n🚶‍♂️ Thank You!!"""
+**3. Attach :** I can attach media & file in a message by public links.
+➩ First send a message. 
+➩ Then Reply with a link for attaching.\n\n📍Check Complete Details Here 👇🏻\n------------"""
 
     # creating buttons
     buttons = [
         [
             InlineKeyboardButton('Home 🏕', callback_data='home'),
-            InlineKeyboardButton('About 📕', callback_data='about')
+            InlineKeyboardButton('Details 📕', url='https://telegra.ph/TG-File-Store-Bot-05-25-2')
         ],
         [
             InlineKeyboardButton('Close 🔐', callback_data='close')
@@ -60,21 +62,21 @@ async def about_cb(c, m):
     bot = await c.get_me()
 
     # about text
-    about_text = f"""--**My Details :**--
+    about_text = f"""**Hi! {m.from_user.mention(style='md')}, 👋**
 
-🤖 **My Name** : {bot.mention(style='md')}
+🤖 I'm a Telegram {bot.mention(style='md')} written in [python 3](https://www.python.org/) with [Pyrogram](https://github.com/pyrogram/pyrogram) Framework + I can attach file in message also. 
     
-📝 **Language** : [Python 3](https://www.python.org/)
+🧑‍💻 This Bot Is Made By [HKrrish](https://t.me/HKrrish) & Thanks to [Anoymous_Ns](https://t.me/Anonymous_Ns) for their code. ❤
 
-🧰 **Framework** : [Pyrogram](https://github.com/pyrogram/pyrogram)
+📍**--Note--** : Please don't send adults files, don't block the bot & don't spam.
 
-👨‍💻 **Creator** : [This Person](https://t.me/HKrrish)
+👥 **Contact My Boss** : [Here](https://t.me/iDeepBot) for any help etc. 
 
-🤗 **Credit** : [@Anoymous_Ns](https://t.me/Anoymous_Ns)
+📖 **My Details** : [Click Here](https://telegra.ph/TG-File-Store-Bot-05-25-2)
 
-👥 **Contact** : [Here](https://t.me/KrAsst_Bot)
+|> Thank You :)
 
-🌐 **Help** :  [Click Here](https://telegra.ph/TG-File-Store-Bot-05-25-2)
+-------
 """
 
     # creating buttons
