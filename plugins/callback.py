@@ -16,9 +16,9 @@ async def help_cb(c, m):
     await m.answer()
 
     # help text
-    help_text = f"""**Hello! {m.from_user.mention(style='md')}, 👋**\n\n
-**❓ --Help Menu--**\n\n
-★ Just send me the files, I will store file and give you share able link. (`your files will totally safe here`)\n\n👨‍💻 **--Commands--**\n\n• • /start : for start the bot.\n•  /mode : You Can Enable or Disable Uploader Details in Caption.\n  `/mode channel_id` : for channels.\n• /batch : You Can Store Multiple files in one link.\n• /me : Your Info.\n• /bots : Our some useful bots.\n• /rate : Rate this Bot.
+    help_text = f"""Hello! {m.from_user.mention(style='md')}, 👋\n
+**❓ --Help Menu--**\n
+★ Just send me the files, I will store file and give you share able link. `Your files will totally safe here`\n\n👨‍💻 **--Commands--**\n\n• /start : for start the bot.\n• /mode : You Can Enable or Disable Uploader Details in Caption.\n  `/mode channel_id` : for channels.\n• /batch : You Can Store Multiple files in one link.\n• /me : Your Info.\n• /rate : Rate this Bot.
 
 
 **💠 --Features-- ❕**
@@ -29,7 +29,7 @@ async def help_cb(c, m):
 
 **3. Attach :** I can attach media & file in a message by public links.
 ➩ First send a message. 
-➩ Then Reply with a link for attaching.\n\n📍Check Complete Details Here 👇🏻\n------------"""
+➩ Then Reply with a link for attaching.\n\n📍**Check Complete Details Here** 👇🏻\n______"""
 
     # creating buttons
     buttons = [
@@ -64,7 +64,7 @@ async def about_cb(c, m):
     # about text
     about_text = f"""**Hi! {m.from_user.mention(style='md')}, 👋**
 
-🤖 I'm a Telegram {bot.mention(style='md')} written in [python 3](https://www.python.org/) with [Pyrogram](https://github.com/pyrogram/pyrogram) Framework + I can attach file in message also. 
+🤖 I'm a Telegram {bot.mention(style='md')} v1.2 written in [python 3](https://www.python.org/) with [Pyrogram](https://github.com/pyrogram/pyrogram) Framework + I can attach file in message also. 
     
 🧑‍💻 This Bot Is Made By [HKrrish](https://t.me/HKrrish) & Thanks to [Anoymous_Ns](https://t.me/Anonymous_Ns) for their code. ❤
 
@@ -118,4 +118,4 @@ async def delete_cb(c, m):
     chat_id = m.from_user.id if not DB_CHANNEL_ID else int(DB_CHANNEL_ID)
     message = await c.get_messages(chat_id, int(msg_id))
     await message.delete()
-    await m.message.edit("Deleted files successfully 👨‍✈️")
+    await m.message.edit("Deleted files successfully --> 🗑")
