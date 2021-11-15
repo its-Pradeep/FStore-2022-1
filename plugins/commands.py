@@ -30,16 +30,16 @@ async def start(c, m, cb=False):
 
 💡 ** I'm Telegram File Store Bot! 🤖**
 
-You can store your any Telegram Media for Permanent Shareable Link!\n• Channel Support!\n• Check **Help** Button.\n• Know More. 👇
+You can store your any Telegram Media for Permanent Shareable Link!\n\n➠ Check Help 👇🏻
 
 
-**👲 Created By :** @HKrrish 👨‍💻\n..
+**<| @HKrrish 👨‍💻👨‍💻\n..
 """
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('Know More 📝', url=f"https://telegra.ph/TG-File-Store-Bot-05-25-2"),
+            InlineKeyboardButton('In Details 📝', url=f"https://telegra.ph/TG-File-Store-Bot-05-25-2"),
             InlineKeyboardButton('Help 💡', callback_data="help")
         ],
         [
