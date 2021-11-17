@@ -93,19 +93,19 @@ async def start(c, m, cb=False):
             if chat_id.startswith('-100'):
                 channel = await c.get_chat(int(chat_id))
                 caption += "**--Uploader Details :--**\n\n" 
-                caption += f"**📢 Channel Name :** `{channel.title}`\n\n" 
-                caption += f"**🗣 User Name :** @{channel.username}\n\n" if channel.username else "" 
-                caption += f"**👤 Channel Id :** `{channel.id}`\n\n" 
-                caption += f"**💬 DC ID :** {channel.dc_id}\n\n" if channel.dc_id else "" 
+                caption += f"**📢 Channel Name :** `{channel.title}`\n" 
+                caption += f"**🗣 User Name :** @{channel.username}\n" if channel.username else "" 
+                caption += f"**👤 Channel Id :** `{channel.id}`\n" 
+                caption += f"**💬 DC ID :** {channel.dc_id}\n" if channel.dc_id else "" 
                 caption += f"**👥 Members Count :** {channel.members_count}\n\n" if channel.members_count else ""
             else:
                 user = await c.get_users(int(chat_id)) 
                 caption += "**--Uploader Details :--**\n\n" 
-                caption += f"**🙂 First Name :** `{user.first_name}`\n\n" 
-                caption += f"**🙃 Last Name :** `{user.last_name}`\n\n" if user.last_name else "" 
-                caption += f"**💥 User Name :** @{user.username}\n\n" if user.username else "" 
-                caption += f"**👤 User Id :** `{user.id}`\n\n" 
-                caption += f"**💬 DC ID :** {user.dc_id}\n\n" if user.dc_id else ""
+                caption += f"**🙂 First Name :** `{user.first_name}`\n" 
+                caption += f"**🙃 Last Name :** `{user.last_name}`\n" if user.last_name else "" 
+                caption += f"**💥 User Name :** @{user.username}\n" if user.username else "" 
+                caption += f"**👤 User Id :** `{user.id}`\n" 
+                caption += f"**💬 DC ID :** {user.dc_id}\n" if user.dc_id else ""
 
 
         await send_msg.delete()
@@ -124,16 +124,16 @@ async def me(c, m):
     """ This will be sent when /me command was used"""
 
     me = await c.get_users(m.from_user.id)
-    text = "--**YOUR DETAILS :**--\n\n\n"
-    text += f"**🙂 First Name :** `{me.first_name}`\n\n"
-    text += f"**🙃 Last Name :** `{me.last_name}`\n\n" if me.last_name else ""
+    text = "--**• Your Info •**--\n\n"
+    text += f"**🙂 First Name :** `{me.first_name}`\n"
+    text += f"**🙃 Last Name :** `{me.last_name}`\n" if me.last_name else ""
     text += f"**💥 User Name :** @{me.username}\n\n" if me.username else ""
-    text += f"**👤 User Id :** `{me.id}`\n\n"
+    text += f"**👤 User Id :** `{me.id}`\n"
     text += f"**💬 DC ID :** {me.dc_id}\n\n" if me.dc_id else ""
-    text += f"**✔ Is Verified By TELEGRAM :** `{me.is_verified}`\n\n" if me.is_verified else ""
-    text += f"**👺 Is Fake :** {me.is_fake}\n\n" if me.is_fake else ""
+    text += f"**✔ Is Verified By TELEGRAM :** `{me.is_verified}`\n" if me.is_verified else ""
+    text += f"**👺 Is Fake :** {me.is_fake}\n" if me.is_fake else ""
     text += f"**💨 Is Scam :** {me.is_scam}\n\n" if me.is_scam else ""
-    text += f"**📃 Language Code :** {me.language_code}\n\n" if me.language_code else ""
+    text += f"**📃 Language Code :** `{me.language_code}`\n\n" if me.language_code else ""
 
     await m.reply_text(text, quote=True)
 
@@ -182,7 +182,7 @@ async def batch(c, m):
     send = await c.send_message(m.from_user.id, string_base64) if not DB_CHANNEL_ID else await c.send_message(int(DB_CHANNEL_ID), string_base64)
     base64_string = await encode_string(f"batch_{m.chat.id}_{send.message_id}")
     bot = await c.get_me()
-    url = f"**--Here is Your link--**\n\nhttps://t.me/{bot.username}?start={base64_string}"
+    url = f"**--• Here is Your link •--**\n\nhttps://t.me/{bot.username}?start={base64_string}\n Save It!"
 
     await message.edit(text=url)
 
