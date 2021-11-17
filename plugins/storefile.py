@@ -42,7 +42,7 @@ async def storefile(c, m):
     bot = await c.get_me()
     base64_string = await encode_string(f"{m.chat.id}_{msg.message_id}")
     url = f"https://t.me/{bot.username}?start={base64_string}"
-    txt = urllib.parse.quote(text.replace('--', ''))
+    txt = urllib.parse.quote(text.replace('', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
 
     # making buttons
@@ -97,7 +97,7 @@ async def storefile_channel(c, m):
     bot = await c.get_me()
     base64_string = await encode_string(f"{m.chat.id}_{msg.message_id}")
     url = f"https://t.me/{bot.username}?start={base64_string}"
-    txt = urllib.parse.quote(text.replace('--', ''))
+    txt = urllib.parse.quote(text.replace('', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
 
     # making buttons
