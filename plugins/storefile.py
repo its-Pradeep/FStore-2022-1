@@ -31,7 +31,7 @@ async def storefile(c, m):
     text += f"**🙃 Last Name :** `{m.from_user.last_name}`\n" if m.from_user.last_name else ""
     text += f"**💥 User Name :** @{m.from_user.username}\n" if m.from_user.username else ""
     text += f"**👤 User Id :** `{m.from_user.id}`\n"
-    text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n" if m.from_user.dc_id else --""
+    text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n• Here Is Your Link : `{url}`\n\n" if m.from_user.dc_id else ""
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
