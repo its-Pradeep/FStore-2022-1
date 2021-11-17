@@ -16,7 +16,7 @@ async def storefile(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "Hello! {m.from_user.mention(style='md')}\n\n--**🗃️ File Details :**--\n\n"
+        text = "**--Link Generated--**\n\n**🗃️ File Details :**--\n\n"
         text += f"📂 **File Name :** `{media.file_name}`\n" if media.file_name else ""
         text += f"💽 **Mime Type :** `{media.mime_type}`\n" if media.mime_type else ""
         text += f"📊 **File Size :** `{humanbytes(media.file_size)}`\n" if media.file_size else ""
@@ -31,7 +31,7 @@ async def storefile(c, m):
     text += f"**🙃 Last Name :** `{m.from_user.last_name}`\n" if m.from_user.last_name else ""
     text += f"**💥 User Name :** @{m.from_user.username}\n" if m.from_user.username else ""
     text += f"**👤 User Id :** `{m.from_user.id}`\n"
-    text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n• Here Is Your Link •\n\n🔗 : `{url}`\n.." if m.from_user.dc_id else --""
+    text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n" if m.from_user.dc_id else --""
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
