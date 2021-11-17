@@ -69,8 +69,8 @@ async def refresh_cb(c, m):
             caption += "\n\n\n**--Uploader Details :--**\n\n"
             caption += f"**📢 Channel Name :** `{channel.title}`\n"
             caption += f"**🗣 User Name :** @{channel.username}\n" if channel.username else ""
-            caption += f"**👤 Channel Id :** `{channel.id}`\n"
-            caption += f"**💬 DC ID :** {channel.dc_id}\n" if channel.dc_id else ""
+            caption += f"**👤 Channel Id :** `{channel.id}`\n\n"
+            caption += f"**💬 DC ID :** {channel.dc_id}\n\n" if channel.dc_id else ""
             caption += f"**👥 Members Count :** {channel.members_count}\n\n" if channel.members_count else ""
         
         else: #if file not from channel
@@ -79,7 +79,7 @@ async def refresh_cb(c, m):
             caption += f"**🙂 First Name :** `{user.first_name}`\n"
             caption += f"**🙃 Last Name :** `{user.last_name}`\n" if user.last_name else ""
             caption += f"**💥 User Name :** @{user.username}\n" if user.username else ""
-            caption += f"**👤 User Id :** `{user.id}`\n"
+            caption += f"**👤 User Id :** `{user.id}`\n\n"
             caption += f"**💬 DC ID :** {user.dc_id}\n\n" if user.dc_id else ""
 
     await msg.copy(m.from_user.id, caption=caption)
