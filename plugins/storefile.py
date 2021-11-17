@@ -30,7 +30,7 @@ async def storefile(c, m):
     text += f"**🙂 First Name :** `{m.from_user.first_name}`\n"
     text += f"**🙃 Last Name :** `{m.from_user.last_name}`\n" if m.from_user.last_name else ""
     text += f"**💥 User Name :** @{m.from_user.username}\n" if m.from_user.username else ""
-    text += f"**👤 User Id :** `{m.from_user.id}`\n"
+    text += f"**👤 User Id :** `{m.from_user.id}`\n\n"
     text += f"**💬 DC ID :** {m.from_user.dc_id}\n\n" if m.from_user.dc_id else ""
 
     # if databacase channel exist forwarding message to channel
@@ -84,8 +84,8 @@ async def storefile_channel(c, m):
     text += "**--Uploader Details-- :**\n\n"
     text += f"**📢 Channel Name :** `{m.chat.title}`\n"
     text += f"**🗣 User Name :** @{m.chat.username}\n" if m.chat.username else ""
-    text += f"**👤 Channel Id :** `{m.chat.id}`\n"
-    text += f"**💬 DC ID :** {m.chat.dc_id}\n" if m.chat.dc_id else ""
+    text += f"**👤 Channel Id :** `{m.chat.id}`\n\n"
+    text += f"**💬 DC ID :** {m.chat.dc_id}\n\n" if m.chat.dc_id else ""
     text += f"**👥 Members Count :** {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
     # if databacase channel exist forwarding message to channel
