@@ -67,14 +67,14 @@ async def start(c, m, cb=False):
 
             if string.empty:
                 owner = await c.get_users(int(OWNER_ID))
-                return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @KrAsst_Bot")
+                return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @iDeepBot")
             message_ids = (await decode(string.text)).split('-')
             for msg_id in message_ids:
                 msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
 
                 if msg.empty:
                     owner = await c.get_users(int(OWNER_ID))
-                    return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @KrAsst_Bot")
+                    return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @iDeepBot")
 
                 await msg.copy(m.from_user.id)
                 await asyncio.sleep(1)
