@@ -92,7 +92,7 @@ async def start(c, m, cb=False):
         if as_uploadername:
             if chat_id.startswith('-100'):
                 channel = await c.get_chat(int(chat_id))
-                caption += "**--Uploader Details :--**\n\n" 
+                caption += "**--Uploader Details-- :**\n\n" 
                 caption += f"**📢 Channel Name :** `{channel.title}`\n" 
                 caption += f"**🗣 User Name :** @{channel.username}\n" if channel.username else "" 
                 caption += f"**👤 Channel Id :** `{channel.id}`\n" 
@@ -100,12 +100,12 @@ async def start(c, m, cb=False):
                 caption += f"**👥 Members Count :** {channel.members_count}\n\n" if channel.members_count else ""
             else:
                 user = await c.get_users(int(chat_id)) 
-                caption += "**--Uploader Details :--**\n\n" 
+                caption += "**--Uploader Details-- :**\n\n" 
                 caption += f"**🙂 First Name :** `{user.first_name}`\n" 
                 caption += f"**🙃 Last Name :** `{user.last_name}`\n" if user.last_name else "" 
                 caption += f"**💥 User Name :** @{user.username}\n" if user.username else "" 
                 caption += f"**👤 User Id :** `{user.id}`\n" 
-                caption += f"**💬 DC ID :** {user.dc_id}\n" if user.dc_id else ""
+                caption += f"**💬 DC ID :** {user.dc_id}\n\n" if user.dc_id else ""
 
 
         await send_msg.delete()
@@ -168,7 +168,7 @@ async def batch(c, m):
                 await m.reply_text(text="Something went wrong. Try again later.")
         i += 1
 
-    message = await m.reply_text("Please wait..! Generating your shareable link 🔗")
+    message = await m.reply_text("**Please wait..!** Generating your shareable link 🔗")
     string = ""
     for file in files:
         if DB_CHANNEL_ID:
@@ -182,7 +182,7 @@ async def batch(c, m):
     send = await c.send_message(m.from_user.id, string_base64) if not DB_CHANNEL_ID else await c.send_message(int(DB_CHANNEL_ID), string_base64)
     base64_string = await encode_string(f"batch_{m.chat.id}_{send.message_id}")
     bot = await c.get_me()
-    url = f"**--• Here is Your link •--**\n\nhttps://t.me/{bot.username}?start={base64_string}\n Save It!"
+    url = f"**--• Here is Your link •--**\n\n🔗 : https://t.me/{bot.username}?start={base64_string}\n\n**Save It!**"
 
     await message.edit(text=url)
 
