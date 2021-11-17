@@ -31,7 +31,7 @@ async def forcesub(c, m):
             return
         except Exception as e:
             print(e)
-            await m.reply_text(f"Something Wrong. Please try again later or contact {owner.mention(style='md')}", quote=True)
+            await m.reply_text(f"Something Wrong. Please try again later or contact @iDeepBot", quote=True)
             return
     await m.continue_propagation()
 
@@ -53,13 +53,13 @@ async def refresh_cb(c, m):
             return
         except Exception as e:
             print(e)
-            await m.message.edit(f"Something Wrong. Please try again later or contact {owner.mention(style='md')}")
+            await m.message.edit(f"Something Wrong. Please try again later or contact @iDeepBot")
             return
 
     cmd, chat_id, msg_id = m.data.split("+")
     msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
     if msg.empty:
-        return await m.reply_text(f"🥴 Sorry Sir, your file was missing\n\nPlease contact my owner 👉 @KrAsst_Bot")
+        return await m.reply_text(f"🥴 Sorry Sir, your file was missing\n\nPlease contact my owner 👉 @iDeepBot")
 
     caption = msg.caption.markdown
     as_uploadername = (await get_data(str(chat_id))).up_name
