@@ -18,7 +18,7 @@ async def help_cb(c, m):
     # help text
     help_text = f"""Hello! {m.from_user.mention(style='md')}, 👋\n
 **❓ --Help Menu--**\n
-★ Just send me the files, I will store file and give you share able link. `Your files will totally safe here.`\n\n👨‍💻 **--Commands--**\n\n• /start : for start the bot.\n• /mode : You Can Enable or Disable Uploader Details in Caption.\n  `/mode channel_id` : for channels.\n• /batch : You Can Store Multiple files in one link.\n• /me : Your Info.\n• /review : Rate this Bot.
+★ Just send me the files, I will store file and give you share able link. `Your files will totally safe here.`\n\n👨‍💻 **--Commands--**\n\n• /start : for start the bot.\n• /mode : You Can Enable or Disable Uploader Details in Caption.\n  `/mode channel_id` : for channels.\n• /batch : You Can Store Multiple files in one link.\n• /me : Your Info.\n• /review : Give your feedback.
 
 
 **💠 --Features-- ❕**
