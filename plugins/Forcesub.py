@@ -59,7 +59,7 @@ async def refresh_cb(c, m):
     cmd, chat_id, msg_id = m.data.split("+")
     msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
     if msg.empty:
-        return await m.reply_text(f"🥴 Sorry Sir, your file was missing\n\nPlease contact my owner 👉 @iDeepBot")
+        return await m.reply_text(f"🥴 **Sorry Sir, your file was deleted!** 🗑\n\n**--Reason--** :\n1. If you stored camrips, adults files, Bot Deleted.\n2. Or Deleted by file Owner.")
 
     caption = msg.caption.markdown
     as_uploadername = (await get_data(str(chat_id))).up_name
