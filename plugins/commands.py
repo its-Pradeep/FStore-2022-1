@@ -67,14 +67,14 @@ async def start(c, m, cb=False):
 
             if string.empty:
                 owner = await c.get_users(int(OWNER_ID))
-                return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @iDeepBot")
+                return await m.reply_text(f"🥴 **Sorry Sir, your file was deleted!** 🗑\n\n**--Reason--** :\n1. If you stored camrips, adults files, Bot Deleted.\n2. Or Deleted by file Owner.")
             message_ids = (await decode(string.text)).split('-')
             for msg_id in message_ids:
                 msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
 
                 if msg.empty:
                     owner = await c.get_users(int(OWNER_ID))
-                    return await m.reply_text(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @iDeepBot")
+                    return await m.reply_text(f"🥴 **Sorry Sir, your file was deleted!** 🗑\n\n**--Reason--** :\n1. If you stored camrips, adults files, Bot Deleted.\n2. Or Deleted by file Owner.")
 
                 await msg.copy(m.from_user.id)
                 await asyncio.sleep(1)
@@ -84,7 +84,7 @@ async def start(c, m, cb=False):
         msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
 
         if msg.empty:
-            return await send_msg.edit(f"🥴 Sorry Sir, your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 @KrAsst_Bot")
+            return await send_msg.edit(f"🥴 **Sorry Sir, your file was deleted!** 🗑\n\n**--Reason--** :\n1. If you stored camrips, adults files, Bot Deleted.\n2. Or Deleted by file Owner.")
         
         caption = f"{msg.caption.markdown}\n\n\n" if msg.caption else ""
         as_uploadername = (await get_data(str(chat_id))).up_name
@@ -150,14 +150,14 @@ async def batch(c, m):
 
     while m.from_user.id in BATCH:
         if i == 1:
-            media = await c.ask(chat_id=m.from_user.id, text='Send me some files or videos or photos or text or audio.\nIf you want to cancel the process send /cancel')
+            media = await c.ask(chat_id=m.from_user.id, text='--**• Here you can generate batch files link •**--\n\nJust Send me some files, videos, photos, text, audio, stickers, etc.\n\nIf you want to cancel the process send /cancel')
             if media.text == "/cancel":
                 return await m.reply_text('Cancelled Successfully ✌')
             files.append(media)
         else:
             try:
                 reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton('Done ✅', callback_data='done')]])
-                media = await c.ask(chat_id=m.from_user.id, text='Ok 😉. Now send me some more files Or press done to get shareable link. If you want to cancel the process send /cancel', reply_markup=reply_markup)
+                media = await c.ask(chat_id=m.from_user.id, text='Ok 😉. Now send me some more files Or press done to get shareable link.\n\nIf you want to cancel the process send /cancel', reply_markup=reply_markup)
                 if media.text == "/cancel":
                     return await m.reply_text('Cancelled Successfully ✌')
                 files.append(media)
@@ -182,7 +182,7 @@ async def batch(c, m):
     send = await c.send_message(m.from_user.id, string_base64) if not DB_CHANNEL_ID else await c.send_message(int(DB_CHANNEL_ID), string_base64)
     base64_string = await encode_string(f"batch_{m.chat.id}_{send.message_id}")
     bot = await c.get_me()
-    url = f"**--• Here is Your link •--**\n\n🔗 : https://t.me/{bot.username}?start={base64_string}\n\n**Save It!**"
+    url = f"**--• Here is Your batch link •--**\n\n🔗 : https://t.me/{bot.username}?start={base64_string}\n\n**Save It!**"
 
     await message.edit(text=url)
 
